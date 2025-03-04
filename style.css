@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(82, 82, 95);
+}
+
+.container {
+    margin: 0 auto;
+    height: 500px;
+    width: 400px;
+    border-radius: 15px;
+    padding: 0%;
+    background-color: rgb(38, 38, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    flex-direction: column;
+    gap: 5px;
+}
+#display {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(16, 16, 19);
+    color: white;
+    font-size: 2em;
+    text-align: right;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+.buttons {
+    display: flex;
+    background-color: rgb(56, 56, 66);
+    width: 100%;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 10px;
+    flex: 4;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2px;
+    gap: 4px;
+}
+
+.button {
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+    background-color:rgb(102, 102, 117);
+    flex: 1;
+    color: white;
+    font-size: 2em;
+    border: none;
+}
+.zero {
+    flex: 1;
+}
+#equals {
+    flex: 1;
+}
+#divide {
+    flex: 1;
+}
+.clear {
+    flex: 1;
+    background-color: rgb(233, 72, 23);
+}
+.button:hover {
+    filter: brightness(1.1);
+}
+.operator {
+    background-color: rgb(240, 126, 50);
+}
