@@ -2,6 +2,7 @@ const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
 const equalsButton = document.getElementById('equals');
 const clearButton = document.getElementById('clear');
+const deleteButton = document.getElementById('delete');
 
 const display = document.getElementById('display');
 
@@ -74,7 +75,22 @@ equalsButton.addEventListener('click', () => {
 });
 
 clearButton.addEventListener('click', () => {
-    clearDisplay();
+    display.value = "";
+    firstNumber = '';
+    secondNumber = '';
+    currentOperation = null;
+    expression = [];
+    isOperatorClicked = false;
+    isClearClicked = true;
+});
+
+deleteButton.addEventListener('click', () => {
+    if (display.value.length > 0) {
+        display.value = display.value.slice(0, -1);
+    } else {
+        display.value = "";
+    }
+    
 });
 
 function calculate() {
@@ -110,14 +126,3 @@ function calculate() {
         currentOperation = null;
         expression = [result];
     } 
-
-
-function clearDisplay() {
-    display.value = "";
-    firstNumber = '';
-    secondNumber = '';
-    currentOperation = null;
-    expression = [];
-    isOperatorClicked = false;
-    isClearClicked = true;
-}
